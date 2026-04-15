@@ -8,7 +8,7 @@ pipeline {
         )
         string(
             name: 'BRANCH',
-            defaultValue: 'main',
+            defaultValue: 'master',
             description: 'Enter the branch name to checkout'
         )
     }
@@ -18,7 +18,7 @@ pipeline {
                 checkout scmGit(
                     branches: [[name: "*/${params.BRANCH}"]],
                     extensions: [],
-                    userRemoteConfigs: [[url: 'https://github.com/ygminds73/Terraform-Automation.git']]
+                    userRemoteConfigs: [[url: 'https://github.com/Lubna-badi/terraform_1.git']]
                 )
             }
         }
