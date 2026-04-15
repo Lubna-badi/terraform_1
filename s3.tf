@@ -5,7 +5,7 @@ resource "aws_s3_bucket" "my-s3-bucket" {
 
 
 resource "aws_s3_bucket_versioning" "my-s3-bucket-versioning" {
-  bucket = my-app-buckey-test-111
+  bucket = aws_s3_bucket.my-s3-bucket.id
   versioning_configuration {
     status = var.versioning ? "Enabled" : "Suspended"
   }
