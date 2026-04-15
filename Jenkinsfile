@@ -23,9 +23,19 @@ pipeline {
             }
         }
 
-        stage("terraform init") {
+         stage("Terraform Init") {
             steps {
-                sh("terraform init -reconfigure")
+                sh '''
+                echo "Cleaning old Terraform cache..."
+                rm -rf .terraform
+                rm -f .terraform.lock.hcl
+
+                echo "Terraform Version:"
+                terraform -version
+
+                echo "Initializing Terraform..."
+                terraform init -upgrade
+                '''
             }
         }
 
