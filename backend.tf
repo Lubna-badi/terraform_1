@@ -4,5 +4,6 @@ terraform {
     key = "master"
     region = "ap-south-1"
     dynamodb_table = "my-dynamodb-table"
+    encrypt = true
   }
 }
