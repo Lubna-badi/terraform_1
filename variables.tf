@@ -10,7 +10,7 @@ variable "key_name" {
 
 variable "instance_type" { 
     description = "instance type for ec2" 
-    default     =  "t2.micro" 
+    default     =  "t3.micro" 
 }
 
 variable "security_group" { 
@@ -24,7 +24,7 @@ variable "tag_name" {
 } 
 variable "ami_id" { 
     description = "AMI for Ubuntu Ec2 instance" 
-    default     = "ami-07ffb2f4d65357b42" 
+    default     = "ami-0cbbb0196ed8877b3" 
 }
 variable "versioning" {
     type        = bool
